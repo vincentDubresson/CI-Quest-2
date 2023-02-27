@@ -33,4 +33,4 @@ jobs:
         with:
           push: true
           context: "{{defaultContext}}:server"
-          tags: vincentDubresson/quete1902:latest
+          tags: vincentdubresson/quete1902:latest
