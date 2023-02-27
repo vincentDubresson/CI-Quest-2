@@ -1,6 +1,6 @@
 name: jest-ci
 
-on: push
+on: pull_request
 
 jobs:
   test-front:
@@ -12,6 +12,7 @@ jobs:
         run: cd client && npm i && npm test
   docker:
     needs: test-front
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       -
